@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EasyChat</title>
+
+
+	<link rel="stylesheet" href="styles/core.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/sidebar.css">
+	<link rel="stylesheet" href="styles/chat-window.css">
+	<link rel="stylesheet" href="styles/chat-tile.css">
+	<link rel="stylesheet" href="styles/chat-message.css">
+	<link rel="stylesheet" href="styles/auth.css">
+	<link rel="stylesheet" href="styles/welcome.css">
+	
+</head>
+
+<body>
+	
+	<section id="login-screen" class="auth-screen">
+		<div class="app-title">EasyChat</div>
+		<h2>Login</h2>
+		<form id="login-form">
+			<input type="text" id="username" placeholder="Username" required>
+			<input type="password" id="password" placeholder="Password" required>
+			<button type="submit">Login</button>
+			<p>Don't have an account? <a href="#" id="go-to-register">Register here</a></p>
+		</form>
+	</section>
+
+	<!-- Register screen -->
+	<section id="register-screen" class="auth-screen hidden">
+		<h2>Register</h2>
+		<form id="register-form">
+			<input type="text" id="new-username" placeholder="Username" required>
+			<input type="email" id="email" placeholder="Email" required>
+			<input type="password" id="new-password" placeholder="Password" required>
+			<button type="submit">Register</button>
+			<p>Already have an account? <a href="#" id="go-to-login">Login here</a></p>
+		</form>
+	</section>
+
+	<main class="hidden" id="main-content">
+
+		<!-- Sidebar -->
+		<aside id="sidebar">
+			<header id="sidebar-header">
+				<div class="title">EasyChat</div>
+				
+				<div class="toolbar">
+					<button class= "button-new-chat" type="button" > <img src="icons/new-chat.svg" alt="" class="icon"></button>	
+					<div class="dropdown">
+						<img src="icons/menu.svg" alt="" class="icon dropdown-button">
+						<div class="dropdown-content">
+							<button class= "button-community" type="button" > New Community</button>
+							<button class= "button-Starred" type="button" > Starred messages</button>
+							<button class= "button-select" type="button" > Select chats</button>
+							<button class= "button-settings" type="button" > Settings</button>
+							<button class= "button-logout" type="button" > Log out</button>
+						  	
+						</div>
+						
+					</div>
+				</div>
+			</header>
+			<form id="search-toolbar">
+				<input type="search" name="" id="search-input" placeholder="Search or start a new chat">
+				
+			</form>
+			<div class="connectivity-notification">
+				<img src="icons/warning.svg" alt="Offline warning">
+				<div>
+					<div class="connectivity-notification-title">
+						Computer not connected
+					</div>
+					<span>
+						Make sure your computer has an active Internet connection
+					</span>
+				</div>
+			</div>
+			<section id="sidebar-contents">
+				<div id="chats-list">
+					
+					
+
+				</div>
+			</section>
+		</aside>
+		<!-- Sidebar ends -->
+		<section id="welcome-screen" class="welcome-screen">
+			<h2>Welcome to EasyChat</h2>
+			<p>Select a user from the sidebar to start chatting.</p>
+		  </section>
+		  
+		  <section id="chat-window" class="hidden">
+			<header id="chat-window-header">
+			  <div id="active-chat-details">
+				<h3></h3>
+				<div class="info">Active Now</div>
+			  </div>
+			  <div class="dropdown">
+				<button class="icon-dropdown-button-chat" type="button">
+				  <img src="icons/menu.svg" alt="" class="icon dropdown-button">
+				</button>
+				<div class="dropdown-content contact-menu">
+				  <button class="button-contact" type="button">Contact info</button>
+				  <button class="button-Delete-chat" type="button">Delete chat</button>
+				  <button class="button-block" type="button">Block</button>
+				</div>
+			  </div>
+			</header>
+			
+				<!-- Messages container -->
+			<div id="chat-messages">
+				<div class="emoji-toolbar">
+					<img src="icons/emoji.svg" alt="" class="icon reaction-button">
+					<div class="reaction-emoji-selector">
+						<a href="#" class="icon">👍🏻</a>
+						<a href="" class="icon">💖</a>
+						<a href="" class="icon">😂</a>
+						<a href="" class="icon"></a>
+						<a href="" class="icon"></a>
+						<a href="" class="icon"></a>
+					</div>
+				</div>
+				<div class="chat-message-container" data-message-id="someMessageId">Message content here</div>
+
+			</div>
+			
+			
+			
+		  
+			<footer class="chat-window-footer">
+			  <button class="button-emoji" type="button"><img src="icons/emoji.svg" alt="" class="icon"></button>
+			  <button class="button-file" type="button"><img src="icons/attachment.svg" alt="" class="icon"></button>
+			  <input type="search" name="message" id="compose-chat-box" placeholder="Type a message" autocomplete="off">
+			  <button class="button-send" type="button">
+				<img src="icons/send_23dp_E8EAED.svg" alt="">
+			  </button>
+			  <button class="button-mic" type="button"><img src="icons/mic.svg" alt="" class="icon"></button>
+			</footer>
+			<a class="scroll-to-top-button" href="#">
+			</a>
+		</section>
+		<!-- Chat window ends -->
+
+	</main>
+
+	<!-- Import Scripts -->
+	<script src="scripts/scroll-to-top.js"></script>
+	<script src="scripts/check-connectivity.js"></script>
+	<script src="scripts/chat.js"></script>
+	<script src="scripts/emoji.js"></script>
+	<script src="scripts/recording-part.js"></script>
+	<script src="scripts/file-upload.js"></script>
+	<script src="scripts/chat-interaction.js"></script>
+	<script src="scripts/sidebar-search.js"></script>
+	<script src="scripts/sidebar-select-chat.js"></script>
+    <script src="scripts/sidebar-starred.js"></script> 
+	<script src="scripts/sidebar-newchat.js"></script> 
+	<script src="scripts/contact-info.js"></script> 
+	<script src="scripts/delete-chat-block.js"></script> 
+	<script src="scripts/new-community.js"></script>
+	<script src="scripts/settings.js"></script>
+	<script src="https://cdn.socket.io/4.5.1/socket.io.min.js"></script>
+	<script src="scripts/chat-handler.js"></script>
+	<script>
+   window.onload = function () {
+  const path = window.location.pathname;
+
+  // Hide all sections initially
+  document.getElementById("login-screen").classList.add("hidden");
+  document.getElementById("register-screen").classList.add("hidden");
+  document.getElementById("main-content").classList.add("hidden");
+
+  // Show the correct section based on the path
+  if (path === "/easychat/login") {
+    document.getElementById("login-screen").classList.remove("hidden");
+  } else if (path === "/easychat/register") {
+    document.getElementById("register-screen").classList.remove("hidden");
+  } else if (path === "/easychat/main") {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn) {
+      document.getElementById("main-content").classList.remove("hidden");
+    } else {
+      alert("You must be logged in to access this page.");
+      window.location.href = "/easychat/login";
+    }
+  } else {
+    window.location.href = "/easychat/login";
+  }
+
+  // Toggle between login and register screens
+  document.getElementById("go-to-register").onclick = function () {
+    document.getElementById("login-screen").classList.add("hidden");
+    document.getElementById("register-screen").classList.remove("hidden");
+  };
+
+  document.getElementById("go-to-login").onclick = function () {
+    document.getElementById("register-screen").classList.add("hidden");
+    document.getElementById("login-screen").classList.remove("hidden");
+  };
+};
+
+
+// Handle login form submission
+document.getElementById("login-form").onsubmit = async function (event) {
+	event.preventDefault();
+
+	// Get username and password values from the input fields
+	const username = document.getElementById("username").value.trim(); // Trim to remove leading/trailing spaces
+	const password = document.getElementById("password").value.trim();
+
+	try {
+		// Make API request to login the user
+		const response = await fetch("http://localhost:5000/api/auth/login", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ username, password }),
+		});
+
+		if (response.ok) {
+			// Login successful
+			const data = await response.json();
+
+            // Store user info in localStorage
+            localStorage.setItem("username", data.user.username);
+            localStorage.setItem("isLoggedIn", true);
+
+            // Populate sidebar with chats and communities
+            populateSidebar(data.chats, data.communities);
+
+			document.getElementById("login-screen").classList.add("hidden");
+			document.getElementById("main-content").classList.remove("hidden");
+		} else {
+			// Parse the response to get the error message
+			const errorData = await response.json();
+			alert(errorData.message || "Invalid credentials");
+		}
+	} catch (error) {
+		// Handle network errors or unexpected issues
+		console.error("Error during login request:", error);
+		alert("An error occurred while trying to log in. Please try again.");
+	}
+};	
+// Function to populate the sidebar with user data
+function populateSidebar(chats, communities) {
+    const chatsList = document.getElementById("chats-list");
+    const sidebarContents = document.getElementById("sidebar-contents");
+
+    // Populate chats
+    chats.forEach((chat) => {
+        const chatTile = document.createElement("div");
+        chatTile.classList.add("chat-tile");
+        chatTile.innerHTML = `
+            <img src="https://picsum.photos/150?random=${chat.chatName}" alt="Avatar" class="chat-tile-avatar">
+            <div class="chat-tile-details">
+                <div class="chat-tile-title">
+                    <span>${chat.chatName}</span>
+                </div>
+                <div class="chat-tile-subtitle">
+                    <span>Last message: ${chat.messages[chat.messages.length - 1]?.text || "No messages yet"}</span>
+                </div>
+            </div>
+        `;
+        chatsList.appendChild(chatTile);
+    });
+
+    // Populate communities
+    communities.forEach((community) => {
+        const communityTile = document.createElement("div");
+        communityTile.classList.add("chat-tile");
+        communityTile.innerHTML = `
+            <img src="https://picsum.photos/150?random=${community.communityName}" alt="Avatar" class="chat-tile-avatar">
+            <div class="chat-tile-details">
+                <div class="chat-tile-title">
+                    <span>${community.communityName}</span>
+                </div>
+                <div class="chat-tile-subtitle">
+                    <span>${community.interest} Community</span>
+                </div>
+            </div>
+        `;
+        sidebarContents.appendChild(communityTile);
+    })
+
+};
+
+// Handle register form submission
+document.getElementById("register-form").onsubmit = async function (event) {
+	event.preventDefault();
+
+	const username = document.getElementById("new-username").value;
+	const email = document.getElementById("email").value;
+	const password = document.getElementById("new-password").value;
+
+	// Make API request to register the user
+	const response = await fetch("http://localhost:5000/api/auth/register", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ username, email, password }),
+	});
+
+	if (response.ok) {
+		alert("Registration successful. Please log in.");
+		document.getElementById("go-to-login").click();
+	} else {
+		alert("Registration failed. Try again.");
+	}
+};
+
+// Handle logout
+document.querySelector(".button-logout").onclick = function () {
+	// Hide main content and show login screen
+	document.getElementById("main-content").classList.add("hidden");
+	document.getElementById("login-screen").classList.remove("hidden");
+
+	// Optionally, clear input fields
+	document.getElementById("username").value = '';
+	document.getElementById("password").value = '';
+	 // Remove login state from localStorage
+      localStorage.removeItem("isLoggedIn");
+	
+};
+
+		
+			
+</script>
+	
+</body>
+
+</html> 
+	
+	

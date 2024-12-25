@@ -1,0 +1,97 @@
+/* Main container styling remains the same */
+.auth-screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color:var(--primary) ;
+}
+
+/* Updated title styling */
+.title{
+	font-size: 29px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 25px;
+	padding-top: 10px;
+    text-align: center;
+    /* animation: glowPulse 2s ease-in-out infinite; */
+}
+.app-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 25px;
+    text-align: center;
+    animation: bounceIn 1.2s ease forwards, glowPulse 2s ease-in-out infinite;
+}
+
+/* Keyframes for bounce-in effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1) translateY(10px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Keyframes for glowing pulse effect */
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 8px #4caf50, 0 0 12px #34a853;
+    }
+    50% {
+        text-shadow: 0 0 16px #4caf50, 0 0 24px #34a853;
+    }
+}
+
+/* Styling for other elements remains the same */
+.auth-screen h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: wheat;
+}
+
+.auth-screen form {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+}
+
+.auth-screen input {
+	margin-bottom: 15px;
+	padding: 10px;
+	border: 1px solid wheat;
+	border-radius: 5px;
+}
+
+.auth-screen button {
+	padding: 10px;
+	background-color: #4caf50;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.auth-screen button:hover {
+	background-color: #388e3c;
+}
+
+.auth-screen p {
+	margin-top: 10px;
+	font-size: 14px;
+	color: wheat;
+}
+
+.hidden {
+	display: none;
+}

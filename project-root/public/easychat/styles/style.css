@@ -1,0 +1,140 @@
+body {
+  background-color: var(--bg-color);
+  
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.icon {
+  padding: 8px;
+  cursor: pointer;
+  filter: invert(79%) sepia(18%) saturate(148%) hue-rotate(158deg)
+    brightness(91%) contrast(88%);
+}
+
+.pin {
+  filter: invert(79%) sepia(18%) saturate(148%) hue-rotate(158deg)
+    brightness(91%) contrast(88%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 10px 0px;
+  width: 195px;
+  background-color: var(--dropdown-color);
+  z-index: 10;
+  border-radius: 3px;
+  /* display: flex; */
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.button-new-chat{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-community{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-Starred{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-select{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-settings{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-logout{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.dropdown-content button {
+  padding: 15px 20px;
+  color: var(--text-primary);
+}
+
+.dropdown-content button:hover {
+  background-color: var(--bg-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+.icon-dropdown-button-chat{
+  background-color: var(--primary);
+  border: none;
+  
+}
+.button-Delete{
+  background-color: var(--primary);
+    border: none;    
+}
+/* chat window dropdown styles contact info delete chat and block */
+
+.button-contact{
+  background-color: var(--primary);
+    border: none;    
+}
+.button-Delete-chat{
+  background-color: var(--primary);
+    border: none;    
+}
+.button-block{
+  background-color: var(--primary);
+    border: none;    
+}
+
+/* Styling for the selected message */
+.selected {
+  background-color: #d4edda; /* Light green background for selected message */
+  border-color: #c3e6cb; /* Slightly darker green border */
+}
+
+/* Styling for the "Message Deleted" text */
+.message-deleted {
+  color: #6c757d;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Highlight the selected message */
+.highlighted {
+  background-color: lightgreen; /* Highlight selected messages */
+}
+
+/* Style for starred messages */
+.starred {
+  background-color: #ffeb3b; /* Highlight starred messages with yellow */
+  border-left: 5px solid gold; /* Optional, adds a golden left border for starred messages */
+}
+
+
