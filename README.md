@@ -23,7 +23,6 @@
 - **Real-time Messaging**: Send and receive messages instantly with WebSocket and Socket.io.
 - **User-friendly UI**: Clean, green-themed design with a simple chat interface.
 - **Multiple Users**: Supports communication between multiple users in different chat sessions.
-- **Responsive Layout**: Works seamlessly across desktop and mobile devices.
 - **Socket.io Integration**: Handles bidirectional communication efficiently.
   
 ---
