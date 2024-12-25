@@ -12,7 +12,7 @@
 
 - Real-time message sending and receiving
 - User-to-user communication via WebSocket and Socket.io
-- Responsive and modern UI with a green color theme
+- Modern UI with a green color theme
 - Backend powered by Node.js and Express.js
 - A minimalist approach to help users focus on messaging
 
@@ -41,8 +41,7 @@
 
 - **Real-time Message Handling**: Ensuring smooth, instant communication between users without lag or delay. This was resolved by leveraging Socket.io for optimized WebSocket connections.
 - **User Authentication**: Initial challenges with managing multiple chat sessions and distinguishing users. Implemented a basic user identification system via socket IDs.
-- **Responsive Design**: Ensuring the chat interface was responsive and worked well on both desktop and mobile devices.
-- **Error Handling**: Managing and logging errors, especially in real-time communication, and ensuring users were informed if something went wrong.
+- - **Error Handling**: Managing and logging errors, especially in real-time communication, and ensuring users were informed if something went wrong.
 
 ---
 
@@ -52,6 +51,7 @@
 - **File Sharing**: Future implementation of file-sharing capabilities (images, documents, etc.).
 - **Group Chat**: Adding support for group chats alongside one-on-one communication.
 - **Dark Mode**: Plan to implement a toggle for dark mode for better accessibility.
+** More Responsive Design**: Ensuring the chat interface was responsive and worked well on both desktop and mobile devices.
 
 ---
 
