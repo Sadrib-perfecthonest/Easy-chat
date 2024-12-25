@@ -1,7 +1,8 @@
 # EasyChat - A Simple Chat Application
 
-![EasyChat Logo](https://yourlogo.com/logo.png)  
+# <span style="color:green">EasyChat</span>  
 **EasyChat** is a simple, real-time chat application built using **WebSocket**, **Socket.io**, **HTML**, **CSS**, **JavaScript**, and **Node.js** with **Express.js**. The application provides a seamless messaging experience, allowing users to send and receive messages instantly.
+
 
 ---
 
