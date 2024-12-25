@@ -41,7 +41,7 @@
 
 - **Real-time Message Handling**: Ensuring smooth, instant communication between users without lag or delay. This was resolved by leveraging Socket.io for optimized WebSocket connections.
 - **User Authentication**: Initial challenges with managing multiple chat sessions and distinguishing users. Implemented a basic user identification system via socket IDs.
-- - **Error Handling**: Managing and logging errors, especially in real-time communication, and ensuring users were informed if something went wrong.
+- **Error Handling**: Managing and logging errors, especially in real-time communication, and ensuring users were informed if something went wrong.
 
 ---
 
