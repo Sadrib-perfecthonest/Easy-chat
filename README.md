@@ -60,5 +60,5 @@
  1. Clone the repository
 
 bash
-git clone https://github.com/Sadrib-perfecthonest/easychat.git
+git clone https://github.com/Sadrib-perfecthonest/Easy-chat.git
 cd easychat
